@@ -234,6 +234,33 @@ class FallbackRuleAgent:
             overall_risk = "medium"
         if len(unmapped_targets) > len(target_fields) // 2:
             overall_risk = "high"
+        # Escalate to high if required target fields are unmapped
+        required_unmapped = [
+            tf["name"] for tf in target_fields
+            if not tf.get("nullable", True)
+            and tf.get("default") is None
+            and tf["name"] in unmapped_targets
+        ]
+        if required_unmapped:
+            overall_risk = "high"
+        # Escalate to high if required target fields are unmapped
+        required_unmapped = [
+            tf["name"] for tf in target_fields
+            if not tf.get("nullable", True)
+            and tf.get("default") is None
+            and tf["name"] in unmapped_targets
+        ]
+        if required_unmapped:
+            overall_risk = "high"
+        # Escalate to high if required target fields are unmapped
+        required_unmapped = [
+            tf["name"] for tf in target_fields
+            if not tf.get("nullable", True)
+            and tf.get("default") is None
+            and tf["name"] in unmapped_targets
+        ]
+        if required_unmapped:
+            overall_risk = "high"
 
         return {
             "mappings": mappings,
