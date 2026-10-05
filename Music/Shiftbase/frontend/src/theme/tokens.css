@@ -1,0 +1,17 @@
+:root {
+  --paper: #ececeb;
+  --ink: #222222;
+  --copy: #4a4a4a;
+  --glass-line: rgba(255, 255, 255, .36);
+  --card-ref-w: 429;
+  --card-ref-h: 554;
+  --card-radius: 17;
+  --card-count: 3;
+  --gap: clamp(8px, 1.5vw, 23px);
+  --gutter: clamp(14px, 3.6vw, 54px);
+  --content-max: calc(var(--card-count) * var(--card-ref-w) * 1px + (var(--card-count) - 1) * var(--gap));
+  --pad-top: clamp(20px, 9.6vh, 94px);
+  --pad-bottom: clamp(16px, 3vh, 52px);
+  --masthead-gap: clamp(16px, 3vw, 40px);
+  --cards-offset: clamp(14px, 9.4vh, 92px);
+}

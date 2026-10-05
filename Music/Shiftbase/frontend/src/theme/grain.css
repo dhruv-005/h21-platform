@@ -1,0 +1,15 @@
+.card__grain {
+  position: absolute;
+  z-index: 2;
+  inset: -8%;
+  width: 116%;
+  height: 116%;
+  opacity: .46;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.card__grain-svg {
+  width: 100%;
+  height: 100%;
+}

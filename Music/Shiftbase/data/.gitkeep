@@ -1,0 +1,2 @@
+# Shiftbase SQLite Database Storage Directory
+# shiftbase.db and WAL journal files will be created here at runtime.

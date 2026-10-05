@@ -1,0 +1,56 @@
+/* Portrait Tablet */
+@media (min-width: 768px) and (max-width: 1180px) and (max-aspect-ratio: 6/7) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    align-content: center;
+  }
+  .card {
+    --card-w: min((100cqw - var(--gap)) / 2, (100cqh - var(--gap)) / 2 * 429 / 554, 429px);
+  }
+  .card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .card {
+    --card-w: min(calc(100vw - 48px), 380px);
+    aspect-ratio: 429 / 480;
+  }
+  .entrance-active .card:nth-child(1),
+  .entrance-active .card:nth-child(2),
+  .entrance-active .card:nth-child(3) {
+    animation-delay: .40s;
+  }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .card {
+    --card-w: calc(100vw - 32px);
+    aspect-ratio: 429 / 460;
+  }
+  .headline {
+    font-size: 18px;
+  }
+  .intro {
+    font-size: 12px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  .cards {
+    gap: 32px;
+  }
+}

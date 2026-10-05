@@ -1,0 +1,50 @@
+/* Stage Container */
+.stage {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  .stage {
+    height: 100svh;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .stage {
+    height: auto;
+    overflow: visible;
+    padding-bottom: 40px;
+  }
+}
+
+.stage-motion {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.stage-motion--wide { display: block; }
+.stage-motion--narrow { display: none; }
+
+@media (max-width: 767px) {
+  .stage-motion--wide { display: none; }
+  .stage-motion--narrow { display: block; }
+}
+
+.stage-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(236,236,234,.10), rgba(236,236,234,.10));
+  z-index: 1;
+  pointer-events: none;
+}

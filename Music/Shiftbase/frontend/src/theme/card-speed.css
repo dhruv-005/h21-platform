@@ -1,0 +1,20 @@
+.card--speed {
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 20%, rgba(255,180,200,.25), transparent 70%),
+    radial-gradient(circle at 50% 45%, rgba(220,80,110,.40), transparent 60%),
+    linear-gradient(180deg, #bd4468 0%, #ad355b 38%, #a63b50 72%, #8c1320 100%);
+  background-origin: border-box;
+}
+
+.card--speed .card__metric { top: 48.6%; }
+.card--speed .card__caption { top: 64.75%; font-size: calc(20.33 * var(--u)); }
+
+.gauge {
+  position: absolute;
+  top: 27.63%;
+  left: 10.5%;
+  width: 79%;
+  height: 59%;
+  overflow: visible;
+  z-index: 3;
+}

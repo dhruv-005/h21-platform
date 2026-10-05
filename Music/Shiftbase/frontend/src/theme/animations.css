@@ -1,0 +1,10 @@
+.entrance-active .headline__line:nth-child(1) { animation: revealUp .84s cubic-bezier(.16, 1, .3, 1) .08s both; }
+.entrance-active .headline__line:nth-child(2) { animation: revealUp .84s cubic-bezier(.16, 1, .3, 1) .17s both; }
+.entrance-active .intro { animation: fadeIn .72s cubic-bezier(.22, 1, .36, 1) .25s both; }
+.entrance-active .card:nth-child(1) { animation: cardEstablish .8s cubic-bezier(.16, 1, .3, 1) .46s both; }
+.entrance-active .card:nth-child(2) { animation: cardEstablish .8s cubic-bezier(.16, 1, .3, 1) .58s both; }
+.entrance-active .card:nth-child(3) { animation: cardEstablish .8s cubic-bezier(.16, 1, .3, 1) .70s both; }
+
+@keyframes revealUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes cardEstablish { from { opacity: 0; transform: translateY(32px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }

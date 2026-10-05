@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 429 238" fill="none" class="connections-svg">
+  <defs>
+    <linearGradient id="warmStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fff8dd" stop-opacity="0.94" />
+      <stop offset="100%" stop-color="#e8703d" stop-opacity="0.30" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base Grid Lines -->
+  <path d="M 45 117 L 133 61 L 189 61 L 319 61 L 384 117" stroke="rgba(255,255,255,0.20)" stroke-width="1" stroke-dasharray="3 3" />
+  <path d="M 45 117 L 133 173 L 260 173 L 319 117 L 384 117" stroke="rgba(255,255,255,0.20)" stroke-width="1" stroke-dasharray="3 3" />
+  <path d="M 133 61 L 133 173" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+  <path d="M 319 61 L 319 117" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+
+  <!-- Active Highlight Connection Paths -->
+  <path d="M 45 117 L 133 61 L 189 61 L 319 117" stroke="url(#warmStroke)" stroke-width="1.8" stroke-linecap="round" />
+  <path d="M 189 61 L 260 173 L 384 117" stroke="rgba(255, 248, 221, 0.52)" stroke-width="1.15" stroke-linecap="round" />
+
+  <!-- Network Coordinate Nodes -->
+  <g class="nodes">
+    <!-- Node 1 (45, 117) -->
+    <circle cx="45" cy="117" r="6.5" fill="#ffffff" fill-opacity="0.9" />
+    <circle cx="45" cy="117" r="10.5" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+
+    <!-- Node 2 (133, 61) -->
+    <circle cx="133" cy="61" r="5.5" fill="#fff8dd" />
+    <circle cx="133" cy="61" r="8.5" stroke="rgba(255,248,221,0.4)" stroke-width="1" />
+
+    <!-- Node 3 (189, 61) -->
+    <circle cx="189" cy="61" r="6.5" fill="#ffffff" fill-opacity="0.95" />
+    <circle cx="189" cy="61" r="11" stroke="rgba(255,255,255,0.35)" stroke-width="1" />
+
+    <!-- Node 4 (319, 61) -->
+    <circle cx="319" cy="61" r="4.5" fill="rgba(255,255,255,0.7)" />
+
+    <!-- Node 5 (319, 117) -->
+    <circle cx="319" cy="117" r="6.5" fill="#ffffff" />
+    <circle cx="319" cy="117" r="10.5" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+
+    <!-- Node 6 (133, 173) -->
+    <circle cx="133" cy="173" r="4.5" fill="rgba(255,255,255,0.6)" />
+
+    <!-- Node 7 (260, 173) -->
+    <circle cx="260" cy="173" r="5.5" fill="#fff8dd" />
+    <circle cx="260" cy="173" r="9" stroke="rgba(255,248,221,0.35)" stroke-width="1" />
+
+    <!-- Node 8 (384, 117) -->
+    <circle cx="384" cy="117" r="6.5" fill="#ffffff" fill-opacity="0.9" />
+    <circle cx="384" cy="117" r="11" stroke="rgba(255,255,255,0.35)" stroke-width="1" />
+  </g>
+</svg>

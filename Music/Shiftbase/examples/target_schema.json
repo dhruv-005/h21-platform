@@ -1,0 +1,78 @@
+{
+  "name": "users_v2",
+  "version": "2.0",
+  "description": "Modernized user table for the new microservices platform",
+  "fields": [
+    {
+      "name": "id",
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true,
+      "description": "User identifier carried over from legacy system"
+    },
+    {
+      "name": "first_name",
+      "type": "string",
+      "nullable": false,
+      "max_length": 128,
+      "description": "User first name extracted from full_name"
+    },
+    {
+      "name": "last_name",
+      "type": "string",
+      "nullable": false,
+      "max_length": 128,
+      "description": "User last name extracted from full_name"
+    },
+    {
+      "name": "email_address",
+      "type": "string",
+      "nullable": false,
+      "max_length": 320,
+      "description": "Verified email address"
+    },
+    {
+      "name": "created_at",
+      "type": "string",
+      "nullable": false,
+      "format": "ISO8601",
+      "description": "Account creation timestamp in ISO 8601 format"
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "nullable": false,
+      "default": "active",
+      "allowed_values": ["active", "inactive", "suspended"],
+      "description": "Account status (deleted users are excluded from migration)"
+    },
+    {
+      "name": "total_logins",
+      "type": "integer",
+      "nullable": false,
+      "default": 0,
+      "description": "Total login count as proper integer"
+    },
+    {
+      "name": "last_active_at",
+      "type": "string",
+      "nullable": true,
+      "format": "ISO8601",
+      "description": "Last activity timestamp in ISO 8601 format"
+    },
+    {
+      "name": "profile_summary",
+      "type": "string",
+      "nullable": true,
+      "max_length": 200,
+      "description": "Truncated user bio for the new compact profile"
+    },
+    {
+      "name": "department",
+      "type": "string",
+      "nullable": true,
+      "max_length": 50,
+      "description": "Full department name resolved from department_code"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+.card--connections {
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 15%, rgba(255,210,180,.30), transparent 70%),
+    radial-gradient(circle at 50% 50%, rgba(232,112,61,.35), transparent 60%),
+    linear-gradient(177deg, #d84736 0%, #dd523c 24%, #e8703d 52%, #de5641 78%, #d34239 100%);
+  background-origin: border-box;
+}
+
+.card--connections .card__metric { top: 48.5%; }
+.card--connections .card__caption { top: 65.1%; }
+
+.connections-map {
+  position: absolute;
+  top: 21.7%;
+  left: 0;
+  width: 100%;
+  height: 43%;
+  opacity: .78;
+  z-index: 3;
+  mask-image: linear-gradient(180deg, #000 0%, #000 50%, rgba(0,0,0,.46) 67%, rgba(0,0,0,.15) 83%, transparent 96%);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 50%, rgba(0,0,0,.46) 67%, rgba(0,0,0,.15) 83%, transparent 96%);
+}

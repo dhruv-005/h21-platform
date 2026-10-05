@@ -1,0 +1,77 @@
+{
+  "name": "users_v1",
+  "version": "1.0",
+  "description": "Legacy user table from the old monolithic application",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "integer",
+      "nullable": false,
+      "primary_key": true,
+      "description": "Auto-incrementing user identifier"
+    },
+    {
+      "name": "full_name",
+      "type": "string",
+      "nullable": false,
+      "max_length": 255,
+      "description": "User full name stored as a single string"
+    },
+    {
+      "name": "signup_date",
+      "type": "string",
+      "nullable": true,
+      "format": "MM/DD/YYYY",
+      "description": "Date the user registered, stored as plain text"
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "nullable": false,
+      "max_length": 320,
+      "description": "User email address"
+    },
+    {
+      "name": "phone",
+      "type": "string",
+      "nullable": true,
+      "max_length": 20,
+      "description": "Phone number in various formats"
+    },
+    {
+      "name": "account_status",
+      "type": "string",
+      "nullable": false,
+      "default": "active",
+      "allowed_values": ["active", "inactive", "suspended", "deleted"],
+      "description": "Current account status"
+    },
+    {
+      "name": "login_count",
+      "type": "string",
+      "nullable": true,
+      "description": "Number of logins stored as string by mistake in legacy system"
+    },
+    {
+      "name": "last_login",
+      "type": "string",
+      "nullable": true,
+      "format": "YYYY-MM-DD HH:MM:SS",
+      "description": "Last login timestamp as string"
+    },
+    {
+      "name": "bio",
+      "type": "string",
+      "nullable": true,
+      "max_length": 1000,
+      "description": "User biography text"
+    },
+    {
+      "name": "department_code",
+      "type": "string",
+      "nullable": true,
+      "max_length": 10,
+      "description": "Internal department code"
+    }
+  ]
+}

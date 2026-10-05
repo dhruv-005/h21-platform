@@ -1,0 +1,42 @@
+.learn-more {
+  position: absolute;
+  z-index: 6;
+  top: 83.75%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(111 * var(--u));
+  height: calc(45 * var(--u));
+}
+
+.learn-more button,
+.pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 999px;
+  color: #2d2d2d;
+  background: rgba(255, 255, 255, .97);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .50) inset, 0 1px 3px rgba(58, 25, 39, .08);
+  font-size: calc(14 * var(--u));
+  font-weight: 500;
+  letter-spacing: calc(-.25 * var(--u));
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  text-decoration: none;
+}
+
+.learn-more button:hover,
+.pill-button:hover {
+  transform: translateY(calc(-2 * var(--u)));
+  box-shadow: 0 8px 20px rgba(58, 25, 39, .16);
+  background: #ffffff;
+}
+
+.learn-more button:focus-visible,
+.pill-button:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, .78);
+  outline-offset: 3px;
+}
